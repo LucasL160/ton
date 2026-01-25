@@ -12,7 +12,8 @@ import { contractAddress } from '@ton/core';
 import { HighloadWalletV3Code } from '../wrappers/compiled';
 import { highloadWalletV3ConfigToCell } from '../wrappers/HighloadWalletV3';
 
-const RPC_URL = process.env.RPC_URL || 'https://net.ton.dev';
+// Default to a well-known public TON RPC endpoint; override via the RPC_URL environment variable.
+const RPC_URL = process.env.RPC_URL || 'https://toncenter.com/api/v2/jsonRPC';
 const WORKCHAIN = Number(process.env.WORKCHAIN || 0);
 const SUBWALLET_ID = Number(process.env.SUBWALLET_ID || 0x10ad);
 const TIMEOUT = Number(process.env.TIMEOUT || 3600);
